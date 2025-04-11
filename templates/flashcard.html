@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Flashcard {{ index }} of {{ total }}</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Question {{ index }} of {{ total }}</h2>
+    <p>{{ flashcard.question }}</p>
+    <form method="POST">
+        <label for="user_answer">Your Answer:</label>
+        <input type="text" name="user_answer" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
